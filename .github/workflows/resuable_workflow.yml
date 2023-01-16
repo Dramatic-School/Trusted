@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: ${{ secrets.token }}
+    - uses: actions/checkout@v3
+    
+    - name: Run a command
+      run: echo "I am running the workflow and this workflow is resuable because I am using workflow_call"
         
 
