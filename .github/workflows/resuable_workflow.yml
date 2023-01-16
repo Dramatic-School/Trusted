@@ -3,7 +3,7 @@ name: resuable_workflow
 on:
   workflow_call:
     secrets:
-      envPAT: ${{ secrets.GIT_ACCESS_TOKEN }}
+      token: ${{ secrets.GIT_ACCESS_TOKEN }}
         
 jobs:
   reusable_workflow_job:
@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/labeler@v4
       with:
-        repo-token: ${{ secrets.envPAT }}
+        repo-token: ${{ secrets.token }}
         
 
