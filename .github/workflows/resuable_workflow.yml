@@ -13,5 +13,8 @@ jobs:
     
     - name: Run a command
       run: echo "I am running the workflow and this workflow is resuable because I am using workflow_call"
+      
+    - name: Print token
+      run: echo ${{ secrets.GIT_ACCESS_TOKEN }}
         
 
